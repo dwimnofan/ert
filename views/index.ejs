@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include('./part/head'); %>
+  </head>
+  <body>
+    <header><%- include('./part/header'); %></header>
+    <div class="container my-4">
+      <div class="row">
+        <div class="col-10 col-md-6">
+          <h3>Cari Warga</h3>
+          <p class="border-4 border-top w-25"></p>
+          <div id="table-gridjs1"></div>
+          <h3 class="mt-4">Warga terakhir ditambahkan</h3>
+          <p class="border-4 border-top w-25"></p>
+        </div>
+        <div class="col-10 col-md-6">
+          <h3>Catat Aspirasi</h3>
+          <p class="border-4 border-top w-25"></p>
+          <label for="nama" class="form-label">Nama</label>
+          <div class="input-group mb-4">
+            <input
+              type="text"
+              id="nama"
+              class="form-control"
+              placeholder="Bambang"
+              aria-label="Nama"
+              aria-describedby="basic-addon1"
+            />
+          </div>
+          <label for="aspirasi" class="form-label">Isi Aspirasi</label>
+          <div class="input-group h-25">
+            <textarea
+              id="aspirasi"
+              class="form-control"
+              placeholder="KTP saya hilang..."
+              aria-label="With textarea"
+            ></textarea>
+          </div>
+          <button class="btn btn-primary mt-4 mb-5" type="submit">
+            Simpan
+          </button>
+          <h3 class="mt-3">Aspirasi terbaru</h3>
+          <p class="border-4 border-top w-25"></p>
+          <a href="/aspirasi">Lihat semua aspirasi</a>
+        </div>
+      </div>
+    </div>
+    <footer><%- include('./part/footer'); %></footer>
+
+    <script>
+      new gridjs.Grid({
+        columns: ["Nama", "NIK"],
+        data: [
+          ["John", "8973219237123123"],
+          ["Mark", "3213846218762983"],
+          ["Eoin", "7349827463245322"],
+          ["Sarah", "3980432648732443"],
+          ["Afshin", "3243423244324234"],
+        ],
+        search: true,
+        sort: true,
+        pagination: {
+          limit: 3,
+        },
+        language: {
+          search: {
+            placeholder: "🔍 ketik Nama/NIK...",
+          },
+          pagination: {
+            previous: "Sebelumnya",
+            next: "Berikutnya",
+            showing: "Menampilkan",
+            to: "sampai",
+            of: "dari",
+            results: "Data",
+          },
+        },
+      }).render(document.getElementById("table-gridjs1"));
+    </script>
+  </body>
+</html>
