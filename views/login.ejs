@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <%- include('./part/head.ejs'); %>
+    <%- include('./part/head'); %>
   </head>
   <body>
     <div class="text-center mt-4">
@@ -13,21 +13,27 @@
           width="22px"
         />E-RT
       </h3>
+      <% if (hasMessages) { %>
+      <ul>
+        <% messages.forEach(function(message){ %>
+        <li><%= message %></li>
+        <% }); %>
+      </ul>
+      <% } %>
     </div>
-    <form">
+    <form action="/login/password" method="post">
       <div class="col d-flex justify-content-center">
         <div class="card border-0" style="width: 18rem">
           <div class="card-body">
             <div class="form-group">
-              <label for="exampleInputEmail1">Email</label>
+              <label for="exampleInputEmail1">Username</label>
               <input
-                type="email"
-                name="email"
+                type="text"
+                name="username"
                 class="form-control"
-                id="email"
+                id="username"
                 aria-describedby="emailHelp"
-                placeholder="Enter email"
-                value=""
+                placeholder="Username"
               />
             </div>
             <div class="form-group">
@@ -39,7 +45,6 @@
                 id="password"
                 aria-describedby="emailHelp"
                 placeholder="*********"
-                value=""
               />
             </div>
             <div class="text-center mt-4">

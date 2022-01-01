@@ -1,24 +1,21 @@
 var express = require("express");
 var router = express.Router();
 
-router.get("/", function (req, res, next) {
-  res.render("./index", { title: "E-RT" });
-});
-
-router.get("/login", function (req, res, next) {
-  res.render("./login", { title: "Login" });
+/* GET home page. */
+router.get("/home", function (req, res, next) {
+  res.render("index", { user: req.user });
 });
 
 router.get("/warga", function (req, res, next) {
-  res.render("./warga/index", { title: "Kelola Warga" });
+  res.render("./warga/index", { user: req.user });
 });
 
 router.get("/aspirasi", function (req, res, next) {
-  res.render("./warga/aspirasi", { title: "Semua Aspirasi" });
+  res.render("./warga/aspirasi", { user: req.user });
 });
 
 router.get("/rt", function (req, res, next) {
-  res.render("./rt/index", { title: "Kelola RT" });
+  res.render("./rt/index", { user: req.user });
 });
 
 module.exports = router;
