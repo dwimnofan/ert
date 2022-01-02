@@ -14,6 +14,10 @@ router.get("/aspirasi", function (req, res, next) {
   res.render("./warga/aspirasi", { user: req.user });
 });
 
+router.get("/edit", function (req, res, next) {
+  res.render("./warga/edit", { user: req.user });
+});
+
 router.get("/rt", function (req, res, next) {
   res.render("./rt/index", { user: req.user });
 });

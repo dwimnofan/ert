@@ -1,3 +1,19 @@
 <!-- <h1><%= message %></h1>
 <h2><%= error.status %></h2> -->
-404
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('./part/head'); %>
+  </head>
+  <body>
+    <div class="container">
+      <div class="position-absolute top-50 start-50 translate-middle">
+        <div class="alert alert-danger text-center" role="alert">
+          <b>Akses dilarang</b>, Silakan
+          <a href="/login" class="alert-link"><b>Login</b></a>
+        </div>
+      </div>
+    </div>
+    <footer><%- include('./part/footer'); %></footer>
+  </body>
+</html>

@@ -37,7 +37,7 @@
               aria-label="With textarea"
             ></textarea>
           </div>
-          <button class="btn btn-primary mt-4 mb-5" type="submit">
+          <button class="btn btn-primary mt-4 mb-4" type="submit">
             Simpan
           </button>
           <h3 class="mt-3">Aspirasi terbaru</h3>
@@ -60,6 +60,8 @@
         ],
         search: true,
         sort: true,
+        width: 500,
+        resizable: true,
         pagination: {
           limit: 3,
         },
@@ -68,8 +70,8 @@
             placeholder: "🔍 ketik Nama/NIK...",
           },
           pagination: {
-            previous: "Sebelumnya",
-            next: "Berikutnya",
+            previous: "⬅️",
+            next: "➡️",
             showing: "Menampilkan",
             to: "sampai",
             of: "dari",
