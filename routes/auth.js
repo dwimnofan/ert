@@ -13,7 +13,7 @@ router.get("/login", function (req, res, next) {
 router.post(
   "/login/password",
   passport.authenticate("local", {
-    successRedirect: "/",
+    successRedirect: "/home",
     failureRedirect: "/login",
     failureMessage: true,
   })
