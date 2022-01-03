@@ -46,8 +46,4 @@ router.get("/", ensureLoggedIn(), function (req, res, next) {
   );
 });
 
-router.get('/', ensureLoggedIn({ redirectTo: '/', setReturnTo: false }), function(req, res) { 
-  res.render("index", { user: req.user });
-});
-
 module.exports = router;
