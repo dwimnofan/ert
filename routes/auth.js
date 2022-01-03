@@ -1,7 +1,7 @@
 var express = require("express");
 var passport = require("passport");
 var ensureLoggedIn = require("connect-ensure-login").ensureLoggedIn;
-var db = require("../db");
+var db = require("../database/db");
 
 var router = express.Router();
 
