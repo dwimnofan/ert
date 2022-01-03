@@ -13,7 +13,7 @@ router.get("/login", function (req, res, next) {
 router.post(
   "/login/password",
   passport.authenticate("local", {
-    successRedirect: "/home",
+    successRedirect: "/",
     failureRedirect: "/login",
     failureMessage: true,
   })
@@ -44,6 +44,10 @@ router.get("/", ensureLoggedIn(), function (req, res, next) {
       res.render("/", { user: user });
     }
   );
+});
+
+router.get('/', ensureLoggedIn({ redirectTo: '/', setReturnTo: false }), function(req, res) { 
+  res.render("index", { user: req.user });
 });
 
 module.exports = router;
