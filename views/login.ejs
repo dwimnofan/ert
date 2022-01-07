@@ -14,11 +14,11 @@
         />E-RT
       </h3>
       <% if (hasMessages) { %>
-      <ul>
+      <h3>
         <% messages.forEach(function(message){ %>
-        <li><%= message %></li>
+        <b><%= message %></b>
         <% }); %>
-      </ul>
+      </h3>
       <% } %>
     </div>
     <form action="/login/password" method="post">
@@ -27,25 +27,33 @@
           <div class="card-body">
             <div class="form-group">
               <label for="exampleInputEmail1">Username</label>
-              <input
-                type="text"
-                name="username"
-                class="form-control"
-                id="username"
-                aria-describedby="emailHelp"
-                placeholder="Username"
-              />
+              <div class="input-group">
+                <span class="input-group-text"
+                  ><i class="bi bi-person"></i
+                ></span>
+                <input
+                  type="text"
+                  name="username"
+                  class="form-control"
+                  id="username"
+                  aria-describedby="emailHelp"
+                  placeholder="Username"
+                />
+              </div>
             </div>
             <div class="form-group">
               <label for="exampleInputEmail1">Password</label>
-              <input
-                type="password"
-                name="password"
-                class="form-control"
-                id="password"
-                aria-describedby="emailHelp"
-                placeholder="*********"
-              />
+              <div class="input-group">
+                <span class="input-group-text"><i class="bi bi-key"></i></span>
+                <input
+                  type="password"
+                  name="password"
+                  class="form-control"
+                  id="password"
+                  aria-describedby="emailHelp"
+                  placeholder="*********"
+                />
+              </div>
             </div>
             <div class="text-center mt-4">
               <input type="submit" class="btn btn-primary" value="Login" />

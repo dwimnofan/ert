@@ -3,10 +3,10 @@ var crypto = require("crypto");
 var db = require("../database/db");
 
 var router = express.Router();
-
-router.get("/new", function (req, res, next) {
-  res.render("signup");
-});
+// register
+// router.get("/new", function (req, res, next) {
+//   res.render("signup");
+// });
 
 router.post("/", function (req, res, next) {
   var salt = crypto.randomBytes(16);

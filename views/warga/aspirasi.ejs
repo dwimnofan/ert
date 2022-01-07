@@ -10,22 +10,9 @@
         <div class="col">
           <h3>Semua Aspirasi</h3>
           <p class="border-4 border-top w-25"></p>
-          <div id="table-gridjs1"></div>
         </div>
       </div>
     </div>
     <footer><%- include('../part/footer'); %></footer>
-
-    <script>
-      new gridjs.Grid({
-        columns: ["Nama", "Isi Aspirasi"],
-        data: [
-          ["John", "aaaaaaa"],
-          ["Eoin", "bbbbbbbb"],
-          ["Mark", "cccccccc"],
-        ],
-        sort: true,
-      }).render(document.getElementById("table-gridjs1"));
-    </script>
   </body>
 </html>

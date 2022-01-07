@@ -126,23 +126,5 @@
       </div>
     </div>
     <footer><%- include('../part/footer'); %></footer>
-
-    <script>
-      new gridjs.Grid({
-        columns: ["Nama", "Jabatan", "Tugas"],
-        data: [
-          ["John", "Ketua"],
-          ["Eoin", "Sekretaris"],
-          ["Mark", "Bendahara"],
-        ],
-        sort: true,
-      }).render(document.getElementById("table-gridjs1"));
-
-      function onlyNumberKey(evt) {
-        var ASCIICode = evt.which ? evt.which : evt.keyCode;
-        if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57)) return false;
-        return true;
-      }
-    </script>
   </body>
 </html>

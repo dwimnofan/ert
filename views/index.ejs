@@ -10,7 +10,6 @@
         <div class="col-10 col-md-6">
           <h3>Cari Warga</h3>
           <p class="border-4 border-top w-25"></p>
-          <div id="table-gridjs1"></div>
           <h3 class="mt-4">Warga terakhir ditambahkan</h3>
           <p class="border-4 border-top w-25"></p>
         </div>
@@ -47,38 +46,5 @@
       </div>
     </div>
     <footer><%- include('./part/footer'); %></footer>
-
-    <script>
-      new gridjs.Grid({
-        columns: ["Nama", "NIK"],
-        data: [
-          ["John", "8973219237123123"],
-          ["Mark", "3213846218762983"],
-          ["Eoin", "7349827463245322"],
-          ["Sarah", "3980432648732443"],
-          ["Afshin", "3243423244324234"],
-        ],
-        search: true,
-        sort: true,
-        width: 500,
-        resizable: true,
-        pagination: {
-          limit: 3,
-        },
-        language: {
-          search: {
-            placeholder: "🔍 ketik Nama/NIK...",
-          },
-          pagination: {
-            previous: "⬅️",
-            next: "➡️",
-            showing: "Menampilkan",
-            to: "sampai",
-            of: "dari",
-            results: "Data",
-          },
-        },
-      }).render(document.getElementById("table-gridjs1"));
-    </script>
   </body>
 </html>

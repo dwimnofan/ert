@@ -11,8 +11,8 @@ var usersRouter = require("./routes/users");
 
 var app = express();
 
-require("./boot/db")();
-require("./boot/auth")();
+require("./config/db_config")();
+require("./controllers/authController")();
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
