@@ -1,50 +1,29 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <%- include('./part/head'); %>
+    <%- include('_head'); %>
   </head>
   <body>
-    <header><%- include('./part/header'); %></header>
+    <header><%- include('_header'); %></header>
     <div class="container my-4">
       <div class="row">
-        <div class="col-10 col-md-6">
-          <h3>Cari Warga</h3>
+        <div class="col-10">
+          <h3>Halo, <b><%= user.username %></b></h3>
           <p class="border-4 border-top w-25"></p>
-          <h3 class="mt-4">Warga terakhir ditambahkan</h3>
-          <p class="border-4 border-top w-25"></p>
-        </div>
-        <div class="col-10 col-md-6">
-          <h3>Catat Aspirasi</h3>
-          <p class="border-4 border-top w-25"></p>
-          <label for="nama" class="form-label">Nama</label>
-          <div class="input-group mb-4">
-            <input
-              type="text"
-              id="nama"
-              class="form-control"
-              placeholder="Bambang"
-              aria-label="Nama"
-              aria-describedby="basic-addon1"
-            />
-          </div>
-          <label for="aspirasi" class="form-label">Isi Aspirasi</label>
-          <div class="input-group h-25">
-            <textarea
-              id="aspirasi"
-              class="form-control"
-              placeholder="KTP saya hilang..."
-              aria-label="With textarea"
-            ></textarea>
-          </div>
-          <button class="btn btn-primary mt-4 mb-4" type="submit">
-            Simpan
-          </button>
-          <h3 class="mt-3">Aspirasi terbaru</h3>
-          <p class="border-4 border-top w-25"></p>
-          <a href="/aspirasi">Lihat semua aspirasi</a>
         </div>
       </div>
+      <h5 class="card-title">Cari Data Warga</h5>
+      <form class="d-flex" method="POST" action="/cariWarga" novalidate>
+        <input
+          class="form-control me-2"
+          type="text"
+          placeholder="Cari data berdasarkan Nama atau NIK"
+          aria-label="search"
+          name="search"
+        />
+        <button class="btn btn-outline-primary" type="submit">Cari</button>
+      </form>
     </div>
-    <footer><%- include('./part/footer'); %></footer>
+    <footer><%- include('_footer'); %></footer>
   </body>
 </html>

@@ -1,9 +1,10 @@
 <!-- <h1><%= message %></h1>
-<h2><%= error.status %></h2> -->
+<h2><%= error.status %></h2>
+<pre><%= error.stack %></pre> -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <%- include('./part/head'); %>
+    <%- include('_head'); %>
   </head>
   <body>
     <div class="container">
@@ -14,6 +15,6 @@
         </div>
       </div>
     </div>
-    <footer><%- include('./part/footer'); %></footer>
+    <footer><%- include('_footer'); %></footer>
   </body>
-</html> 
+</html>

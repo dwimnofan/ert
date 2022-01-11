@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include('_head.ejs'); %>
+  </head>
+  <body>
+    <header><%- include('_header'); %></header>
+    <div class="container my-4">
+      <div class="row">
+        <div class="col-10 col-md-6">
+          <h3>Struktur RT</h3>
+          <p class="border-4 border-top w-25"></p>
+          <div class="table-responsive-sm">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th>Nama</th>
+                  <th>Jabatan</th>
+                  <th class="d-print-none">
+                    <a class="btn btn-sm btn-success" href="/addRt">Add</a>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <% for (const struktur_rt of model) { %>
+                <tr>
+                  <td><%= struktur_rt.nama %></td>
+                  <td><%= struktur_rt.jabatan %></td>
+                  <td class="d-print-none">
+                    <a
+                      class="btn btn-sm btn-warning"
+                      href="/editRt/<%= struktur_rt.id %>"
+                      >Edit</a
+                    >
+                    <a
+                      class="btn btn-sm btn-danger"
+                      href="/deleteRt/<%= struktur_rt.id %>"
+                      >Delete</a
+                    >
+                  </td>
+                </tr>
+                <% } %>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="col-10 col-md-6">
+          <img
+            class="img-fluid"
+            src="/images/struktur.png"
+            alt=""
+            height="50px"
+          />
+        </div>
+      </div>
+    </div>
+    <footer><%- include('_footer'); %></footer>
+  </body>
+</html>

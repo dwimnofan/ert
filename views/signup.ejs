@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <%- include('./part/head'); %>
+    <%- include('_head'); %>
   </head>
   <body>
     <div class="text-center mt-4">
@@ -19,11 +19,11 @@
           <div class="card border-0" style="width: 18rem">
             <div class="card-body">
               <div class="form-group">
-                <label for="exampleInputEmail1">Username</label>
-                <input type="text" class="form-control" name="name" placeholder="Name" />
+                <label for="exampleInputEmail1">Nama</label>
+                <input type="text" class="form-control" name="name" placeholder="Nama" />
               </div>
               <div class="form-group">
-                <label for="exampleInputEmail1">Password</label>
+                <label for="exampleInputEmail1">Username</label>
                 <input type="text" class="form-control" name="username" placeholder="Username" />
               </div>
               <div class="form-group">
@@ -38,6 +38,6 @@
         </div>
       </form>
     </div>
-    <footer><%- include('./part/footer'); %></footer>
+    <footer><%- include('_footer'); %></footer>
   </body>
 </html>
