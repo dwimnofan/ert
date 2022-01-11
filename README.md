@@ -36,7 +36,7 @@ import database yang ada di /database/db.sqlite
 ### Start server
 
 ```sh
-node start
+npm start
 ```
 
 ### URL
